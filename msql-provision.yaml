@@ -10,7 +10,7 @@
 
     - name: Copy mysqld.cnf file
       copy:
-        src: /root/mysqld.cnf
+        src: ./mysql/mysqld.cnf
         dest: /etc/mysql/mysql.conf.d/mysqld.cnf
         owner: mysql
         group: mysql
@@ -33,9 +33,9 @@
 
     - name: Update mysql root password for all root accounts
       community.mysql.mysql_user:
-        name: samp1
+        name: sampuser1
         host: "%"
-        password: "052401"
+        password: "samplexxx1234"
         state: present
         login_unix_socket: /var/run/mysqld/mysqld.sock
         config_file: /etc/mysql/mysql.conf.d/mysqld.cnf
