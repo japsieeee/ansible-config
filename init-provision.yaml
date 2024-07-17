@@ -1,0 +1,9 @@
+---
+- name: Initial Installation
+  hosts: my_host
+  become: yes
+  tasks:
+    - name: Install SSHPASS
+      apt:
+        name: sshpass
+        state: present

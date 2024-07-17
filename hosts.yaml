@@ -3,3 +3,9 @@ locals:
     my_host:
       ansible_host: localhost
       ansible_connection: local
+externals:
+  hosts:
+    host_105:
+      ansible_host: 192.168.68.105
+      ansible_user: root
+      ansible_password: "052401"

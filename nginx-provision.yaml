@@ -1,6 +1,6 @@
 ---
 - name: Nginx Provisioning
-  hosts: my_host
+  hosts: host_105
   become: yes
   tasks:
     - name: Install Nginx
