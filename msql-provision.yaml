@@ -50,6 +50,12 @@
         config_file: /etc/mysql/mysql.conf.d/mysqld.cnf
         priv: "*.*:ALL,GRANT"
 
+    - name: Create db named main
+      community.mysql.mysql_db:
+        name: main
+        state: present
+        login_unix_socket: /run/mysqld/mysqld.sock
+
     - name: Restart MySQL Service
       service:
         name: mysql
